@@ -13,7 +13,7 @@ describe.only('Things Endpoints', function() {
 
   function makeAuthHeader(user) {
        const token = Buffer.from(`${user.user_name}:${user.password}`).toString('base64')
-       return `Basic ${token}`
+       return `bearer ${token}`
      }
 
   before('make knex instance', () => {
